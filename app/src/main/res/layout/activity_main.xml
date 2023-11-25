@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity=""
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/x_input_field"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="X Location"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/y_input_field"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Y Location"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/width_input_field"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Width"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/height_input_field"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Height"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/opacity_input_field"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Opacity"
+            android:inputType="numberDecimal" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/movable_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Movable" />
+
+        <Button
+            android:id="@+id/create_btn"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/id_input_field"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:autofillHints="Overlay ID"
+            android:hint="Overlay ID"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/delete_btn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/overlay_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
